@@ -1,0 +1,68 @@
+{
+    "buildBehavior": {
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "DEPARTMENT_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "DEPARTMENT_ID",
+            "oid": "5eccb393-97e5-4ed4-b167-8aa9f81788c6",
+            "precision": 4,
+            "scale": 0,
+            "size": 5,
+            "type": 41
+        },
+        {
+            "hidden": false,
+            "id": "DEPARTMENT_NAME",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "DEPARTMENT_NAME",
+            "oid": "1932dda2-242b-4fd7-a6e3-143ddee91d77",
+            "precision": 30,
+            "scale": 0,
+            "size": 30,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "MANAGER_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "MANAGER_ID",
+            "oid": "d7eaf782-5deb-4a42-8df2-615fcb842b3f",
+            "precision": 6,
+            "scale": 0,
+            "size": 7,
+            "type": 41
+        },
+        {
+            "hidden": false,
+            "id": "LOCATION_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LOCATION_ID",
+            "oid": "0c48248c-eb1f-4162-a4f3-f810ef0de753",
+            "precision": 4,
+            "scale": 0,
+            "size": 5,
+            "type": 41
+        }
+    ],
+    "dataset": "12dd0cba-3bd7-4850-876a-9e1fdcc53054",
+    "hidden": false,
+    "id": "DEPARTMENTS",
+    "isMaterialized": false,
+    "name": "DEPARTMENTS",
+    "oid": "c41dc552-f7cb-4e9a-9d2f-91a8f41929e8",
+    "primaryKeyColumnNames": [
+        "DEPARTMENT_ID"
+    ],
+    "schemaName": "HR",
+    "tupleTransformations": [
+    ],
+    "type": "base"
+}

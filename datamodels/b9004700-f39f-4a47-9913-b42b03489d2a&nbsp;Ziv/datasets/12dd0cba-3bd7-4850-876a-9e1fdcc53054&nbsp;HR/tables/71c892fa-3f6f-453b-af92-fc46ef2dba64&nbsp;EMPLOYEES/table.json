@@ -1,0 +1,152 @@
+{
+    "buildBehavior": {
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "EMPLOYEE_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "EMPLOYEE_ID",
+            "oid": "90855e22-3456-4830-a15d-f38c583d96f1",
+            "precision": 6,
+            "scale": 0,
+            "size": 7,
+            "type": 41
+        },
+        {
+            "hidden": false,
+            "id": "FIRST_NAME",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "FIRST_NAME",
+            "oid": "3b2d2d0d-1530-4cae-9dc4-b741f2c25095",
+            "precision": 20,
+            "scale": 0,
+            "size": 20,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "LAST_NAME",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LAST_NAME",
+            "oid": "31032398-1b42-4992-acce-7abfb5c57a23",
+            "precision": 25,
+            "scale": 0,
+            "size": 25,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "EMAIL",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "EMAIL",
+            "oid": "8220348d-2aa0-4f18-abd6-4f87f98ab734",
+            "precision": 25,
+            "scale": 0,
+            "size": 25,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "PHONE_NUMBER",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "PHONE_NUMBER",
+            "oid": "10d607df-3bcc-450d-b428-6fbfd3b227c5",
+            "precision": 20,
+            "scale": 0,
+            "size": 20,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "HIRE_DATE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "HIRE_DATE",
+            "oid": "eb997daa-0462-4fdc-9d5e-55975964be90",
+            "precision": 7,
+            "scale": 0,
+            "size": 50,
+            "type": 4
+        },
+        {
+            "hidden": false,
+            "id": "JOB_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "JOB_ID",
+            "oid": "dad14d1f-4635-4714-8c24-1ba908b3c899",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "SALARY",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SALARY",
+            "oid": "b3ff6328-567b-43c0-a4df-9481a9d9d7eb",
+            "precision": 8,
+            "scale": 2,
+            "size": 9,
+            "type": 41
+        },
+        {
+            "hidden": false,
+            "id": "COMMISSION_PCT",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "COMMISSION_PCT",
+            "oid": "97bbe553-7c45-4b58-a873-ff1f0fe92ab6",
+            "precision": 2,
+            "scale": 2,
+            "size": 3,
+            "type": 41
+        },
+        {
+            "hidden": false,
+            "id": "MANAGER_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "MANAGER_ID",
+            "oid": "04f73c28-aa93-4b79-9fc7-a36d82467da9",
+            "precision": 6,
+            "scale": 0,
+            "size": 7,
+            "type": 41
+        },
+        {
+            "hidden": false,
+            "id": "DEPARTMENT_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "DEPARTMENT_ID",
+            "oid": "e705abfe-8937-4533-a0ff-00d871d30818",
+            "precision": 4,
+            "scale": 0,
+            "size": 5,
+            "type": 41
+        }
+    ],
+    "dataset": "12dd0cba-3bd7-4850-876a-9e1fdcc53054",
+    "hidden": false,
+    "id": "EMPLOYEES",
+    "isMaterialized": false,
+    "name": "EMPLOYEES",
+    "oid": "71c892fa-3f6f-453b-af92-fc46ef2dba64",
+    "primaryKeyColumnNames": [
+        "EMPLOYEE_ID"
+    ],
+    "schemaName": "HR",
+    "tupleTransformations": [
+    ],
+    "type": "base"
+}

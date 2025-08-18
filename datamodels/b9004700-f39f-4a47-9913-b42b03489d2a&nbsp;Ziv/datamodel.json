@@ -1,0 +1,35 @@
+{
+    "analyticalEngine": {
+        "queryAeMode": "AE_ONLY"
+    },
+    "buildDestination": {
+        "destination": "live"
+    },
+    "datamodelId": "b9004700-f39f-4a47-9913-b42b03489d2a",
+    "datasets": [
+        "./12dd0cba-3bd7-4850-876a-9e1fdcc53054/dataset.json"
+    ],
+    "dependencies": {
+        "perspectives": [
+            "./b9004700-f39f-4a47-9913-b42b03489d2a/perspective.json"
+        ]
+    },
+    "experiments": {
+    },
+    "fiscal": "system",
+    "hierarchies": [
+    ],
+    "modelStatistics": {
+        "allTablesPerCollection": true,
+        "enableModelStatistics": true,
+        "maxTablesPerCollection": 10
+    },
+    "oid": "b9004700-f39f-4a47-9913-b42b03489d2a",
+    "relationType": "direct",
+    "relations": "./relations.json",
+    "relationsTables": [
+    ],
+    "schemaId": null,
+    "title": "Ziv",
+    "type": "live"
+}

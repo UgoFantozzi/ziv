@@ -1,0 +1,81 @@
+{
+    "buildBehavior": {
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "EMPLOYEE_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "EMPLOYEE_ID",
+            "oid": "4c065ae1-bee2-494d-b12d-2e0b20f7417b",
+            "precision": 6,
+            "scale": 0,
+            "size": 7,
+            "type": 41
+        },
+        {
+            "hidden": false,
+            "id": "START_DATE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "START_DATE",
+            "oid": "2b4777e9-9b8e-4ec1-b7e4-fa75913b24c4",
+            "precision": 7,
+            "scale": 0,
+            "size": 50,
+            "type": 4
+        },
+        {
+            "hidden": false,
+            "id": "END_DATE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "END_DATE",
+            "oid": "410ceae0-052f-4497-9879-93d77c9ebafe",
+            "precision": 7,
+            "scale": 0,
+            "size": 50,
+            "type": 4
+        },
+        {
+            "hidden": false,
+            "id": "JOB_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "JOB_ID",
+            "oid": "a3eefb17-76f1-4902-ba8e-02e73004ebfc",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "DEPARTMENT_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "DEPARTMENT_ID",
+            "oid": "8a22f283-aad4-4e39-819f-8eee98733cca",
+            "precision": 4,
+            "scale": 0,
+            "size": 5,
+            "type": 41
+        }
+    ],
+    "dataset": "12dd0cba-3bd7-4850-876a-9e1fdcc53054",
+    "hidden": false,
+    "id": "JOB_HISTORY",
+    "isMaterialized": false,
+    "name": "JOB_HISTORY",
+    "oid": "5b55d6de-af2d-430c-a61f-234a213526f3",
+    "primaryKeyColumnNames": [
+        "EMPLOYEE_ID",
+        "START_DATE"
+    ],
+    "schemaName": "HR",
+    "tupleTransformations": [
+    ],
+    "type": "base"
+}

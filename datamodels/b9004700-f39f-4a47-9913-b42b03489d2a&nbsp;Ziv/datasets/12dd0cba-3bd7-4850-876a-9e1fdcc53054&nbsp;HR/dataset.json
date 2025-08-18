@@ -1,0 +1,23 @@
+{
+    "connection": "./connection.json",
+    "database": "HR",
+    "elasticube": "b9004700-f39f-4a47-9913-b42b03489d2a",
+    "liveQuerySettings": {
+        "autoRefresh": false,
+        "refreshRate": 30000,
+        "resultLimit": 5000,
+        "timeout": 60000
+    },
+    "oid": "12dd0cba-3bd7-4850-876a-9e1fdcc53054",
+    "schemaName": "HR",
+    "tables": [
+        "./5b55d6de-af2d-430c-a61f-234a213526f3/table.json",
+        "./68d3859a-2311-4663-a24d-e8d9a69e8585/table.json",
+        "./71c892fa-3f6f-453b-af92-fc46ef2dba64/table.json",
+        "./a506e1a8-e8f5-49ed-b563-379e16e19850/table.json",
+        "./c41dc552-f7cb-4e9a-9d2f-91a8f41929e8/table.json",
+        "./d2bb0d68-e6d1-497a-9101-7f91c0c2fb6a/table.json",
+        "./e5c6f7d4-0a37-4e2a-afd1-1a9662341f91/table.json"
+    ],
+    "type": "live"
+}

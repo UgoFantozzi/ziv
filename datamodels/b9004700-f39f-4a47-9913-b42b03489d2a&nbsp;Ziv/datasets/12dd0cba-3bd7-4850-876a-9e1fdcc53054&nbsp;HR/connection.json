@@ -1,0 +1,10 @@
+{
+    "description": "",
+    "name": "Data des oracle ",
+    "oid": "e13ea7ac-3dc7-498b-8218-a971ef222829",
+    "provider": "Oracle",
+    "supportedModelTypes": [
+        "LIVE",
+        "EXTRACT"
+    ]
+}

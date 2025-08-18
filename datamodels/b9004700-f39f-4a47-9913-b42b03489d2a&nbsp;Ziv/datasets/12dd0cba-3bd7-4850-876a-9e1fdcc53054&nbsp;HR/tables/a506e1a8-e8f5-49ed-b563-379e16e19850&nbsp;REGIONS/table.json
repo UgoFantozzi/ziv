@@ -1,0 +1,44 @@
+{
+    "buildBehavior": {
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "REGION_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "REGION_ID",
+            "oid": "f44155cb-5b2e-4f68-92b9-c407b9e5c8c1",
+            "precision": 38,
+            "scale": 10,
+            "size": 39,
+            "type": 41
+        },
+        {
+            "hidden": false,
+            "id": "REGION_NAME",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "REGION_NAME",
+            "oid": "706dd8a9-d956-4b2c-bf0a-89252de85c8c",
+            "precision": 25,
+            "scale": 0,
+            "size": 25,
+            "type": 18
+        }
+    ],
+    "dataset": "12dd0cba-3bd7-4850-876a-9e1fdcc53054",
+    "hidden": false,
+    "id": "REGIONS",
+    "isMaterialized": false,
+    "name": "REGIONS",
+    "oid": "a506e1a8-e8f5-49ed-b563-379e16e19850",
+    "primaryKeyColumnNames": [
+        "REGION_ID"
+    ],
+    "schemaName": "HR",
+    "tupleTransformations": [
+    ],
+    "type": "base"
+}

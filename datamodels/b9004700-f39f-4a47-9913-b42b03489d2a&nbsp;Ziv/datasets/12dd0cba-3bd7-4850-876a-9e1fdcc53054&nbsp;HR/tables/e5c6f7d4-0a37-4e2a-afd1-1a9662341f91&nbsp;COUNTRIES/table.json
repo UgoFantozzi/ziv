@@ -1,0 +1,56 @@
+{
+    "buildBehavior": {
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "COUNTRY_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "COUNTRY_ID",
+            "oid": "63d023e4-0a46-4940-9428-7ca8509e8577",
+            "precision": 2,
+            "scale": 0,
+            "size": 2,
+            "type": 3
+        },
+        {
+            "hidden": false,
+            "id": "COUNTRY_NAME",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "COUNTRY_NAME",
+            "oid": "0256d71b-bf80-46c8-a371-44a2af766ead",
+            "precision": 40,
+            "scale": 0,
+            "size": 40,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "REGION_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "REGION_ID",
+            "oid": "00e886c8-3fcb-41f3-bfd6-34a71b449c25",
+            "precision": 38,
+            "scale": 10,
+            "size": 39,
+            "type": 41
+        }
+    ],
+    "dataset": "12dd0cba-3bd7-4850-876a-9e1fdcc53054",
+    "hidden": false,
+    "id": "COUNTRIES",
+    "isMaterialized": false,
+    "name": "COUNTRIES",
+    "oid": "e5c6f7d4-0a37-4e2a-afd1-1a9662341f91",
+    "primaryKeyColumnNames": [
+        "COUNTRY_ID"
+    ],
+    "schemaName": "HR",
+    "tupleTransformations": [
+    ],
+    "type": "base"
+}

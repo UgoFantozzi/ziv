@@ -1,0 +1,68 @@
+{
+    "buildBehavior": {
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "JOB_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "JOB_ID",
+            "oid": "d40cc0c1-2593-4e0c-ae32-5939f2379d8d",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "JOB_TITLE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "JOB_TITLE",
+            "oid": "e3d71e89-31aa-4c0d-ae48-83b5d50d14fd",
+            "precision": 35,
+            "scale": 0,
+            "size": 35,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "MIN_SALARY",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "MIN_SALARY",
+            "oid": "5c9f4ad1-005b-4158-9e00-2e034d6c54b9",
+            "precision": 6,
+            "scale": 0,
+            "size": 7,
+            "type": 41
+        },
+        {
+            "hidden": false,
+            "id": "MAX_SALARY",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "MAX_SALARY",
+            "oid": "1a48b5c3-403c-4c07-aeeb-2c030c2bcd1e",
+            "precision": 6,
+            "scale": 0,
+            "size": 7,
+            "type": 41
+        }
+    ],
+    "dataset": "12dd0cba-3bd7-4850-876a-9e1fdcc53054",
+    "hidden": false,
+    "id": "JOBS",
+    "isMaterialized": false,
+    "name": "JOBS",
+    "oid": "68d3859a-2311-4663-a24d-e8d9a69e8585",
+    "primaryKeyColumnNames": [
+        "JOB_ID"
+    ],
+    "schemaName": "HR",
+    "tupleTransformations": [
+    ],
+    "type": "base"
+}
