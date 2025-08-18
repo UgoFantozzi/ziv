@@ -1,2 +1,18 @@
 [
+    {
+        "columns": [
+            {
+                "column": "e705abfe-8937-4533-a0ff-00d871d30818",
+                "dataset": "12dd0cba-3bd7-4850-876a-9e1fdcc53054",
+                "table": "71c892fa-3f6f-453b-af92-fc46ef2dba64"
+            },
+            {
+                "column": "5eccb393-97e5-4ed4-b167-8aa9f81788c6",
+                "dataset": "12dd0cba-3bd7-4850-876a-9e1fdcc53054",
+                "table": "c41dc552-f7cb-4e9a-9d2f-91a8f41929e8"
+            }
+        ],
+        "elasticube": "b9004700-f39f-4a47-9913-b42b03489d2a",
+        "oid": "168876b6-3e74-44d9-845d-30400f385da1"
+    }
 ]
