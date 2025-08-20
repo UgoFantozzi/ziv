@@ -1,0 +1,229 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "68a5f750eadb93bfbb44ad6e",
+    "datasource": {
+        "address": "localHost",
+        "database": "aSampleIAAaHealthcare",
+        "fullname": "LocalHost/Sample Healthcare",
+        "id": "localhost_aSampleIAAaHealthcare",
+        "title": "Sample Healthcare"
+    },
+    "desc": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[Diagnosis.Description]",
+                            "index": 0
+                        },
+                        "jaql": {
+                            "column": "Description",
+                            "datatype": "text",
+                            "dim": "[Diagnosis.Description]",
+                            "merged": true,
+                            "table": "Diagnosis",
+                            "title": "DIAGNOSIS"
+                        }
+                    }
+                ],
+                "name": "rows"
+            },
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[Admissions.Patient_ID]_count",
+                            "index": 1
+                        },
+                        "format": {
+                            "color": {
+                                "type": "color"
+                            },
+                            "mask": {
+                                "b": true,
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "t": true,
+                                "type": "number"
+                            },
+                            "width": 134
+                        },
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Patient_ID",
+                            "datatype": "numeric",
+                            "dim": "[Admissions.Patient_ID]",
+                            "merged": true,
+                            "table": "Admissions",
+                            "title": "# PATIENTS"
+                        }
+                    },
+                    {
+                        "field": {
+                            "id": "[Admissions.Cost_of_admission]_avg",
+                            "index": 2
+                        },
+                        "format": {
+                            "color": {
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": "0"
+                            },
+                            "width": 182
+                        },
+                        "jaql": {
+                            "agg": "avg",
+                            "column": "Cost_of_admission",
+                            "datatype": "numeric",
+                            "dim": "[Admissions.Cost_of_admission]",
+                            "table": "Admissions",
+                            "title": "AVG COST"
+                        }
+                    },
+                    {
+                        "field": {
+                            "id": "Avg(DDiff([DC7C1-251],[74C2F-ADD]))",
+                            "index": 3,
+                            "max": 10.027932960893855,
+                            "min": 6.811224489795919
+                        },
+                        "format": {
+                            "color": {
+                                "type": "color"
+                            },
+                            "databars": true,
+                            "mask": {
+                                "b": true,
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "t": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "context": {
+                                "[74C2F-ADD]": {
+                                    "column": "Admission_Time",
+                                    "datatype": "datetime",
+                                    "dim": "[Admissions.Admission_Time (Calendar)]",
+                                    "level": "days",
+                                    "table": "Admissions",
+                                    "title": "Days in Admission  Time"
+                                },
+                                "[DC7C1-251]": {
+                                    "column": "Discharge_Time",
+                                    "datatype": "datetime",
+                                    "dim": "[Admissions.Discharge_Time (Calendar)]",
+                                    "level": "days",
+                                    "table": "Admissions",
+                                    "title": "Days in Discharge  Time"
+                                }
+                            },
+                            "formula": "Avg(DDiff([DC7C1-251],[74C2F-ADD]))",
+                            "title": "AVG DAYS ADMITTED",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "columns"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "isdefault": true
+                            }
+                        },
+                        "jaql": {
+                            "collapsed": false,
+                            "column": "Description",
+                            "datasource": {
+                                "address": "localHost",
+                                "database": "aSampleIAAaHealthcare",
+                                "fullname": "LocalHost/Sample Healthcare",
+                                "id": "localhost_aSampleIAAaHealthcare",
+                                "title": "Sample Healthcare"
+                            },
+                            "datatype": "text",
+                            "dim": "[Diagnosis.Description]",
+                            "filter": {
+                                "by": {
+                                    "agg": "count",
+                                    "column": "Patient_ID",
+                                    "datatype": "numeric",
+                                    "dim": "[Admissions.Patient_ID]",
+                                    "table": "Admissions",
+                                    "title": "# PATIENTS"
+                                },
+                                "top": 10
+                            },
+                            "table": "Diagnosis",
+                            "title": "DESCRIPTION"
+                        }
+                    }
+                ],
+                "name": "filters"
+            }
+        ]
+    },
+    "oid": "68a5f750eadb93bfbb44ad75",
+    "options": {
+        "dashboardFiltersMode": "select",
+        "selector": false,
+        "triggersDomready": true
+    },
+    "style": {
+        "alternateStyle": "rows",
+        "automaticHeight": true,
+        "colors": {
+            "columns": false,
+            "headers": true,
+            "members": false,
+            "rows": true,
+            "totals": true
+        },
+        "columnsGrandTotal": false,
+        "oldPageSize": 25,
+        "pageSize": 25,
+        "rowsGrandTotal": true,
+        "totals": {
+            "grandColumns": false,
+            "grandRows": false
+        }
+    },
+    "subtype": "pivot",
+    "title": "TOP 10 DIAGNOSIS",
+    "type": "pivot"
+}

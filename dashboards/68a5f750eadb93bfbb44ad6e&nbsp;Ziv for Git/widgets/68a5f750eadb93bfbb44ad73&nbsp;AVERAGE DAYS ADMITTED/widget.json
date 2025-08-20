@@ -1,0 +1,230 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "68a5f750eadb93bfbb44ad6e",
+    "datasource": {
+        "address": "localHost",
+        "database": "aSampleIAAaHealthcare",
+        "fullname": "LocalHost/Sample Healthcare",
+        "id": "localhost_aSampleIAAaHealthcare",
+        "title": "Sample Healthcare"
+    },
+    "desc": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": false,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "context": {
+                                "[74C2F-ADD]": {
+                                    "column": "Admission_Time",
+                                    "datatype": "datetime",
+                                    "dim": "[Admissions.Admission_Time (Calendar)]",
+                                    "level": "days",
+                                    "table": "Admissions",
+                                    "title": "Days in Admission  Time"
+                                },
+                                "[DC7C1-251]": {
+                                    "column": "Discharge_Time",
+                                    "datatype": "datetime",
+                                    "dim": "[Admissions.Discharge_Time (Calendar)]",
+                                    "level": "days",
+                                    "table": "Admissions",
+                                    "title": "Days in Discharge  Time"
+                                }
+                            },
+                            "formula": "Avg(DDiff([DC7C1-251],[74C2F-ADD]))",
+                            "title": "AVG DAYS ADMITTED",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "value"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "decimals": "1",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "percent"
+                            }
+                        },
+                        "jaql": {
+                            "context": {
+                                "[943C8-B94]": {
+                                    "context": {
+                                        "[74C2F-ADD]": {
+                                            "column": "Admission_Time",
+                                            "datatype": "datetime",
+                                            "dim": "[Admissions.Admission_Time (Calendar)]",
+                                            "level": "days",
+                                            "table": "Admissions",
+                                            "title": "Days in Admission  Time"
+                                        },
+                                        "[DC7C1-251]": {
+                                            "column": "Discharge_Time",
+                                            "datatype": "datetime",
+                                            "dim": "[Admissions.Discharge_Time (Calendar)]",
+                                            "level": "days",
+                                            "table": "Admissions",
+                                            "title": "Days in Discharge  Time"
+                                        }
+                                    },
+                                    "formula": "Avg(DDiff([DC7C1-251],[74C2F-ADD]))",
+                                    "title": "AVERAGE DAYS ADMITTED",
+                                    "type": "measure"
+                                }
+                            },
+                            "formula": "GrowthPastYear([943C8-B94])",
+                            "title": "ANNUAL CHANGE",
+                            "type": "measure"
+                        },
+                        "originalJaql": {
+                            "context": {
+                                "[Days in Admission_Time1]": {
+                                    "column": "Admission_Time",
+                                    "datatype": "datetime",
+                                    "dim": "[Admissions.Admission_Time (Calendar)]",
+                                    "level": "days",
+                                    "table": "Admissions"
+                                },
+                                "[Days in Discharge_Time1]": {
+                                    "column": "Discharge_Time",
+                                    "datatype": "datetime",
+                                    "dim": "[Admissions.Discharge_Time (Calendar)]",
+                                    "level": "days",
+                                    "table": "Admissions"
+                                }
+                            },
+                            "formula": "Avg(DDiff([Days in Discharge_Time1],[Days in Admission_Time1]))",
+                            "title": "Avg(DDiff([Days in Discharge_Time1],[Days in Admission_Time1]))",
+                            "type": "measure"
+                        },
+                        "quickFunction": "GrowthPastYear"
+                    }
+                ],
+                "name": "secondary"
+            },
+            {
+                "items": [
+                ],
+                "name": "min"
+            },
+            {
+                "items": [
+                ],
+                "name": "max"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ]
+    },
+    "oid": "68a5f750eadb93bfbb44ad73",
+    "options": {
+        "allowSelector": false,
+        "dashboardFiltersMode": "filter",
+        "disallowSelector": true,
+        "noTitle": false,
+        "selector": false,
+        "title": false,
+        "triggersDomready": true
+    },
+    "size": "big",
+    "style": {
+        "components": {
+            "icon": {
+                "enabled": true,
+                "inactive": true
+            },
+            "secondaryTitle": {
+                "enabled": true,
+                "inactive": false
+            },
+            "title": {
+                "enabled": false,
+                "inactive": false
+            }
+        },
+        "indicator/gauge": {
+            "components": {
+                "labels": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "ticks": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "1",
+            "subtype": "round"
+        },
+        "indicator/numeric": {
+            "components": {
+                "icon": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "1",
+            "subtype": "simple"
+        },
+        "indicator/pictogram": {
+        },
+        "skin": "1",
+        "subtype": "simple"
+    },
+    "subtype": "indicator/numeric",
+    "title": "AVERAGE DAYS ADMITTED",
+    "type": "indicator"
+}

@@ -1,0 +1,113 @@
+{
+    "filters": [
+        {
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Gender",
+                "datasource": {
+                    "address": "localHost",
+                    "database": "aSampleIAAaHealthcare",
+                    "fullname": "LocalHost/Sample Healthcare",
+                    "id": "localhost_aSampleIAAaHealthcare",
+                    "title": "Sample Healthcare"
+                },
+                "datatype": "text",
+                "dim": "[Patients.Gender]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "table": "Patients",
+                "title": "GENDER"
+            }
+        },
+        {
+            "isCascading": false,
+            "jaql": {
+                "collapsed": false,
+                "column": "Divison_name",
+                "datasource": {
+                    "address": "localHost",
+                    "database": "aSampleIAAaHealthcare",
+                    "fullname": "LocalHost/Sample Healthcare",
+                    "id": "localhost_aSampleIAAaHealthcare",
+                    "title": "Sample Healthcare"
+                },
+                "datatype": "text",
+                "dim": "[Divisions.Divison_name]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "table": "Divisions",
+                "title": "DIVISION"
+            }
+        },
+        {
+            "isCascading": false,
+            "jaql": {
+                "collapsed": false,
+                "column": "Admission_Time",
+                "datasource": {
+                    "address": "localHost",
+                    "database": "aSampleIAAaHealthcare",
+                    "fullname": "LocalHost/Sample Healthcare",
+                    "id": "localhost_aSampleIAAaHealthcare",
+                    "title": "Sample Healthcare"
+                },
+                "datatype": "datetime",
+                "dim": "[Admissions.Admission_Time (Calendar)]",
+                "filter": {
+                    "explicit": true,
+                    "members": [
+                        "2013-01-01T00:00:00"
+                    ],
+                    "multiSelection": true
+                },
+                "level": "years",
+                "merged": true,
+                "table": "Admissions",
+                "title": "ADMISSION DATE"
+            }
+        },
+        {
+            "isCascading": false,
+            "jaql": {
+                "collapsed": false,
+                "column": "Description",
+                "datasource": {
+                    "address": "localHost",
+                    "database": "aSampleIAAaHealthcare",
+                    "fullname": "LocalHost/Sample Healthcare",
+                    "id": "localhost_aSampleIAAaHealthcare",
+                    "title": "Sample Healthcare"
+                },
+                "datatype": "text",
+                "dim": "[Diagnosis.Description]",
+                "filter": {
+                    "by": {
+                        "context": {
+                            "[BDE1B-4DA]": {
+                                "column": "Patient_ID",
+                                "datatype": "numeric",
+                                "dim": "[Admissions.Patient_ID]",
+                                "table": "Admissions",
+                                "title": "Patient_ID"
+                            }
+                        },
+                        "formula": "DupCount([BDE1B-4DA])",
+                        "title": "DupCount([Patient_ID])",
+                        "type": "measure"
+                    },
+                    "top": 10
+                },
+                "merged": true,
+                "table": "Diagnosis",
+                "title": "TOP DIAGNOSES"
+            }
+        }
+    ]
+}
