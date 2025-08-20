@@ -1,0 +1,47 @@
+{
+    "autoUpdateOnFiltersChange": true,
+    "datasource": {
+        "address": "localHost",
+        "database": "aSampleIAAaHealthcare",
+        "fullname": "LocalHost/Sample Healthcare",
+        "id": "localhost_aSampleIAAaHealthcare",
+        "title": "Sample Healthcare"
+    },
+    "desc": "",
+    "filters": "./filters.json",
+    "hierarchies": [
+    ],
+    "layout": "./layout.json",
+    "oid": "68a5fa585f6a339120b1d7ab",
+    "options": {
+        "manual": false
+    },
+    "settings": {
+        "autoUpdateOnFiltersChange": true,
+        "useAcceleration": false
+    },
+    "style": {
+        "palette": {
+            "colors": [
+                "#00cee6",
+                "#9b9bd7",
+                "#6EDA55",
+                "#fc7570",
+                "#fbb755",
+                "#218A8C"
+            ],
+            "name": "Vivid"
+        }
+    },
+    "title": "ziv dash for test",
+    "useAcceleration": false,
+    "widgets": [
+        "./widgets/68a5fa585f6a339120b1d7ac/widget.json",
+        "./widgets/68a5fa585f6a339120b1d7ad/widget.json",
+        "./widgets/68a5fa585f6a339120b1d7ae/widget.json",
+        "./widgets/68a5fa585f6a339120b1d7af/widget.json",
+        "./widgets/68a5fa585f6a339120b1d7b0/widget.json",
+        "./widgets/68a5fa585f6a339120b1d7b1/widget.json",
+        "./widgets/68a5fa585f6a339120b1d7b2/widget.json"
+    ]
+}

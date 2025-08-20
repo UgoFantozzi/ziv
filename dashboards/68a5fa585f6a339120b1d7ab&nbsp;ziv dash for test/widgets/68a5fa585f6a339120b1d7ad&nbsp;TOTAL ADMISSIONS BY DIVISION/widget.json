@@ -1,0 +1,140 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "68a5fa585f6a339120b1d7ab",
+    "datasource": {
+        "address": "localHost",
+        "database": "aSampleIAAaHealthcare",
+        "fullname": "LocalHost/Sample Healthcare",
+        "id": "localhost_aSampleIAAaHealthcare",
+        "title": "Sample Healthcare"
+    },
+    "desc": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "jaql": {
+                            "column": "Divison_name",
+                            "datatype": "text",
+                            "dim": "[Divisions.Divison_name]",
+                            "merged": true,
+                            "table": "Divisions",
+                            "title": "Divison_name"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "context": {
+                                "[D953B-86F]": {
+                                    "column": "Patient_ID",
+                                    "datatype": "numeric",
+                                    "dim": "[Admissions.Patient_ID]",
+                                    "merged": true,
+                                    "table": "Admissions",
+                                    "title": "Patient ID"
+                                }
+                            },
+                            "formula": "count([D953B-86F])",
+                            "title": "count([Patient ID])",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ]
+    },
+    "oid": "68a5fa585f6a339120b1d7ad",
+    "options": {
+        "dashboardFiltersMode": "select",
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "triggersDomready": true
+    },
+    "style": {
+        "axis": {
+            "enabled": true,
+            "gridLines": true,
+            "intervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": true
+        },
+        "categories": {
+            "enabled": true,
+            "gridLines": true,
+            "intervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "title": {
+                "enabled": false
+            }
+        },
+        "dataLimits": {
+            "categoriesCapacity": 200,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": false,
+            "position": "bottom"
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        }
+    },
+    "subtype": "column/polar",
+    "title": "TOTAL ADMISSIONS BY DIVISION",
+    "type": "chart/polar"
+}

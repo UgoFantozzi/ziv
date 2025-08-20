@@ -1,0 +1,485 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "68a5fa585f6a339120b1d7ab",
+    "datasource": {
+        "address": "localHost",
+        "database": "aSampleIAAaHealthcare",
+        "fullname": "LocalHost/Sample Healthcare",
+        "id": "localhost_aSampleIAAaHealthcare",
+        "title": "Sample Healthcare"
+    },
+    "desc": null,
+    "metadata": {
+        "drillHistory": [
+            {
+                "format": {
+                    "mask": {
+                        "days": "shortDate",
+                        "isdefault": true,
+                        "months": "MM yyyy",
+                        "quarters": "Q yyyy",
+                        "years": "yyyy"
+                    }
+                },
+                "jaql": {
+                    "column": "Admission_Time",
+                    "datatype": "datetime",
+                    "dim": "[Admissions.Admission_Time (Calendar)]",
+                    "level": "days",
+                    "table": "Admissions",
+                    "title": "Days in Admission_Time"
+                },
+                "parent": {
+                    "format": {
+                        "mask": {
+                            "days": "shortDate",
+                            "isdefault": true,
+                            "months": "MM yyyy",
+                            "quarters": "Q yyyy",
+                            "years": "yyyy"
+                        }
+                    },
+                    "jaql": {
+                        "column": "Admission_Time",
+                        "datatype": "datetime",
+                        "dim": "[Admissions.Admission_Time (Calendar)]",
+                        "level": "months",
+                        "table": "Admissions",
+                        "title": "Months in Admission_Time"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Admission_Time",
+                        "datatype": "datetime",
+                        "dim": "[Admissions.Admission_Time (Calendar)]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "2013-02-01T00:00:00.000Z"
+                            ],
+                            "singleSelect": false
+                        },
+                        "level": "months",
+                        "table": "Admissions",
+                        "title": "Months in Admission_Time"
+                    }
+                }
+            },
+            {
+                "format": {
+                    "mask": {
+                        "isdefault": true
+                    }
+                },
+                "jaql": {
+                    "column": "Gender",
+                    "datatype": "text",
+                    "dim": "[Patients.Gender]",
+                    "table": "Patients",
+                    "title": "Gender"
+                },
+                "parent": {
+                    "format": {
+                        "mask": {
+                            "days": "shortDate",
+                            "isdefault": true,
+                            "months": "MM yyyy",
+                            "quarters": "Q yyyy",
+                            "years": "yyyy"
+                        }
+                    },
+                    "jaql": {
+                        "column": "Admission_Time",
+                        "datatype": "datetime",
+                        "dim": "[Admissions.Admission_Time (Calendar)]",
+                        "level": "days",
+                        "table": "Admissions",
+                        "title": "Days in Admission_Time"
+                    },
+                    "parent": {
+                        "format": {
+                            "mask": {
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "months": "MM yyyy",
+                                "quarters": "Q yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "jaql": {
+                            "column": "Admission_Time",
+                            "datatype": "datetime",
+                            "dim": "[Admissions.Admission_Time (Calendar)]",
+                            "level": "months",
+                            "table": "Admissions",
+                            "title": "Months in Admission_Time"
+                        }
+                    },
+                    "through": {
+                        "jaql": {
+                            "column": "Admission_Time",
+                            "datatype": "datetime",
+                            "dim": "[Admissions.Admission_Time (Calendar)]",
+                            "filter": {
+                                "explicit": true,
+                                "members": [
+                                    "2013-02-01T00:00:00.000Z"
+                                ],
+                                "singleSelect": false
+                            },
+                            "level": "months",
+                            "table": "Admissions",
+                            "title": "Months in Admission_Time"
+                        }
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Admission_Time",
+                        "datatype": "datetime",
+                        "dim": "[Admissions.Admission_Time (Calendar)]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "2013-02-18T00:00:00.000Z"
+                            ],
+                            "singleSelect": false
+                        },
+                        "level": "days",
+                        "table": "Admissions",
+                        "title": "Days in Admission_Time"
+                    }
+                }
+            },
+            {
+                "format": {
+                    "mask": {
+                        "isdefault": true
+                    }
+                },
+                "jaql": {
+                    "column": "Description",
+                    "datatype": "text",
+                    "dim": "[Diagnosis.Description]",
+                    "table": "Diagnosis",
+                    "title": "Description"
+                },
+                "parent": {
+                    "format": {
+                        "mask": {
+                            "isdefault": true
+                        }
+                    },
+                    "jaql": {
+                        "column": "Gender",
+                        "datatype": "text",
+                        "dim": "[Patients.Gender]",
+                        "table": "Patients",
+                        "title": "Gender"
+                    },
+                    "parent": {
+                        "format": {
+                            "mask": {
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "months": "MM yyyy",
+                                "quarters": "Q yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "jaql": {
+                            "column": "Admission_Time",
+                            "datatype": "datetime",
+                            "dim": "[Admissions.Admission_Time (Calendar)]",
+                            "level": "days",
+                            "table": "Admissions",
+                            "title": "Days in Admission_Time"
+                        },
+                        "parent": {
+                            "format": {
+                                "mask": {
+                                    "days": "shortDate",
+                                    "isdefault": true,
+                                    "months": "MM yyyy",
+                                    "quarters": "Q yyyy",
+                                    "years": "yyyy"
+                                }
+                            },
+                            "jaql": {
+                                "column": "Admission_Time",
+                                "datatype": "datetime",
+                                "dim": "[Admissions.Admission_Time (Calendar)]",
+                                "level": "months",
+                                "table": "Admissions",
+                                "title": "Months in Admission_Time"
+                            }
+                        },
+                        "through": {
+                            "jaql": {
+                                "column": "Admission_Time",
+                                "datatype": "datetime",
+                                "dim": "[Admissions.Admission_Time (Calendar)]",
+                                "filter": {
+                                    "explicit": true,
+                                    "members": [
+                                        "2013-02-01T00:00:00.000Z"
+                                    ],
+                                    "singleSelect": false
+                                },
+                                "level": "months",
+                                "table": "Admissions",
+                                "title": "Months in Admission_Time"
+                            }
+                        }
+                    },
+                    "through": {
+                        "jaql": {
+                            "column": "Admission_Time",
+                            "datatype": "datetime",
+                            "dim": "[Admissions.Admission_Time (Calendar)]",
+                            "filter": {
+                                "explicit": true,
+                                "members": [
+                                    "2013-02-18T00:00:00.000Z"
+                                ],
+                                "singleSelect": false
+                            },
+                            "level": "days",
+                            "table": "Admissions",
+                            "title": "Days in Admission_Time"
+                        }
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Gender",
+                        "datatype": "text",
+                        "dim": "[Patients.Gender]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "Male"
+                            ],
+                            "singleSelect": false
+                        },
+                        "table": "Patients",
+                        "title": "Gender"
+                    }
+                }
+            }
+        ],
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "years": "yyyy"
+                            }
+                        },
+                        "jaql": {
+                            "column": "Admission_Time",
+                            "datatype": "datetime",
+                            "dim": "[Admissions.Admission_Time (Calendar)]",
+                            "level": "months",
+                            "merged": true,
+                            "table": "Admissions",
+                            "title": "Months in Admission_Time"
+                        }
+                    }
+                ],
+                "name": "x-axis"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "context": {
+                                "[36941-55C]": {
+                                    "column": "Admission_Time",
+                                    "datatype": "datetime",
+                                    "dim": "[Admissions.Admission_Time (Calendar)]",
+                                    "level": "days",
+                                    "table": "Admissions",
+                                    "title": "Days in Admission  Time"
+                                },
+                                "[EF06E-0FD]": {
+                                    "column": "Discharge_Time",
+                                    "datatype": "datetime",
+                                    "dim": "[Admissions.Discharge_Time (Calendar)]",
+                                    "level": "days",
+                                    "table": "Admissions",
+                                    "title": "Days in Discharge  Time"
+                                }
+                            },
+                            "formula": "Avg(DDiff([EF06E-0FD],[36941-55C]))",
+                            "title": "Avg Stay in Days",
+                            "type": "measure"
+                        },
+                        "singleSeriesType": "column",
+                        "y2": true
+                    },
+                    {
+                        "format": {
+                            "color": {
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "context": {
+                                "[8A99E-1C7]": {
+                                    "column": "Patient_ID",
+                                    "datatype": "numeric",
+                                    "dim": "[Admissions.Patient_ID]",
+                                    "table": "Admissions",
+                                    "title": "Patient ID"
+                                }
+                            },
+                            "formula": "count([8A99E-1C7])",
+                            "title": "Tot. Patient Admissions",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ]
+    },
+    "oid": "68a5fa585f6a339120b1d7b1",
+    "options": {
+        "dashboardFiltersMode": "select",
+        "selector": true,
+        "triggersDomready": true
+    },
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "top"
+        },
+        "lineWidth": {
+            "width": "thick"
+        },
+        "markers": {
+            "enabled": true,
+            "fill": "hollow",
+            "size": "small"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": false,
+            "intervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": false,
+            "intervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "templateMainYHasGridLines": true,
+            "ticks": true,
+            "title": {
+                "enabled": true
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": false,
+            "intervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": true,
+                "text": "Tot. Patients"
+            }
+        }
+    },
+    "subtype": "line/spline",
+    "title": "TOTAL PATIENT ADMISSIONS & LENGTH OF STAY (DAYS)",
+    "type": "chart/line"
+}
