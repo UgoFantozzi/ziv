@@ -1,5 +1,6 @@
 {
     "autoUpdateOnFiltersChange": true,
+    "dataExploration": true,
     "datasource": {
         "address": "localHost",
         "database": "aSampleIAAaHealthcare",

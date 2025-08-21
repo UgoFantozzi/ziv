@@ -204,6 +204,8 @@
         "selector": false,
         "triggersDomready": true
     },
+    "script": null,
+    "script_old": null,
     "style": {
         "alternateStyle": "rows",
         "automaticHeight": true,
